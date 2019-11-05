@@ -1,22 +1,38 @@
 import React, { Component } from 'react';
 import logo from '../logo.png';
 import Web3 from 'web3';
-import main  from 'ethereum-dex-prices-service';
+import {main}  from 'ethereum-dex-prices-service';
 import './App.css';
 
 class App extends Component {
 
+  constructor(props) {
+    super(props)
+  this.state = {
+     results: [],
+     reserves: []
+  }
+}
+
+
+  async componentDidMount() {
+    fetch(`https://dlp-api-dev.testing.aave.com/data/reserves`)
+    .then(res => console.log(res.json()))
+    // .then(result => console.log(result))
+    // console.log(this.state.reserves);
+
+  }
+
   async componentWillMount() {
+    //await this.loadWeb3();
     await this.getDexPrices();
-  //  await this.loadWeb3();
-  //  await this.loadBlockchainData();
+   // await this.loadBlockchainData();
   }
 
   async getDexPrices() {
     const results = await main('DAI', 500, 'BUY')
-    results.forEach(obj => {
-      // do some stuff
-    })
+    this.setState({results})
+    console.log(this.state.results[0])
   }
   
 //   async loadWeb3() {
@@ -35,10 +51,10 @@ class App extends Component {
 //     const account = await web3.eth.getAccounts();
 //     const id = await web3.eth.net.getId();
 //     this.setState({account: account[0]})
-//     const abi = Marketplace.abi;
-//     const networkData = Marketplace.networks[id];
+//     const abi = MockFlashLoanReceiver.abi;
+//     const networkData = MockFlashLoanReceiver.networks[id];
 //     if (networkData) {
-    
+//     const Contract = MockFlashLoanReceiver(abi, networkData.address);
 //      }  else {
 //         alert("No Contract Deployed!!")
 //     }

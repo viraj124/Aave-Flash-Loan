@@ -1,0 +1,627 @@
+{
+  "contractName": "INetworkMetadataProvider",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getBlocksPerYear",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_blocksPerYear",
+          "type": "uint256"
+        }
+      ],
+      "name": "setBlocksPerYear",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getEthereumAddress",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_ethereumAddress",
+          "type": "address"
+        }
+      ],
+      "name": "setEthereumAddress",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.8+commit.23d335f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"getEthereumAddress\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_ethereumAddress\",\"type\":\"address\"}],\"name\":\"setEthereumAddress\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"getBlocksPerYear\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_blocksPerYear\",\"type\":\"uint256\"}],\"name\":\"setBlocksPerYear\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{\"getBlocksPerYear()\":{\"details\":\"returns the number of blocks in a year\\r\"},\"getEthereumAddress()\":{\"details\":\"returns the address used as mock for the ethereum asset\\r\"},\"setBlocksPerYear(uint256)\":{\"details\":\"sets the number of blocks in a year\\r\"},\"setEthereumAddress(address)\":{\"details\":\"sets the address used as mock for the ethereum asset\\r\"}},\"title\":\"INetworkMetadataProvider interface\\r\"},\"userdoc\":{\"methods\":{\"getBlocksPerYear()\":{\"notice\":\"*********\\r\"},\"getEthereumAddress()\":{\"notice\":\"*********\\r\"},\"setBlocksPerYear(uint256)\":{\"notice\":\"*********\\r\"},\"setEthereumAddress(address)\":{\"notice\":\"*********\\r\"}},\"notice\":\"**********\\rInterface for the ethereum network general data\\r\"}},\"settings\":{\"compilationTarget\":{\"/F/Aave-Flash-Loan/src/contracts/interfaces/INetworkMetadataProvider.sol\":\"INetworkMetadataProvider\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/F/Aave-Flash-Loan/src/contracts/interfaces/INetworkMetadataProvider.sol\":{\"keccak256\":\"0xf847089d1a9f6ea11873aaa46c1327f8f5dab7d5e11a8c99cbf45f85a8cbf8bf\",\"urls\":[\"bzzr://aa7659fc193a888df3df1c7a555d0922dcf321e88d575b0e6dabe46b899d581c\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity ^0.5.0;\r\n\r\n/************\r\n@title INetworkMetadataProvider interface\r\n@notice Interface for the ethereum network general data\r\n*/\r\n\r\ninterface INetworkMetadataProvider {\r\n    /***********\r\n    @dev returns the number of blocks in a year\r\n     */\r\n    function getBlocksPerYear() external view returns (uint256);\r\n\r\n    /***********\r\n    @dev sets the number of blocks in a year\r\n     */\r\n    function setBlocksPerYear(uint256 _blocksPerYear) external;\r\n\r\n    /***********\r\n    @dev returns the address used as mock for the ethereum asset\r\n     */\r\n    function getEthereumAddress() external view returns (address);\r\n\r\n    /***********\r\n    @dev sets the address used as mock for the ethereum asset\r\n     */\r\n    function setEthereumAddress(address _ethereumAddress) external;\r\n\r\n}\r\n",
+  "sourcePath": "F:\\Aave-Flash-Loan\\src\\contracts\\interfaces\\INetworkMetadataProvider.sol",
+  "ast": {
+    "absolutePath": "/F/Aave-Flash-Loan/src/contracts/interfaces/INetworkMetadataProvider.sol",
+    "exportedSymbols": {
+      "INetworkMetadataProvider": [
+        1309
+      ]
+    },
+    "id": 1310,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1288,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:10"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": "**********\r\n@title INetworkMetadataProvider interface\r\n@notice Interface for the ethereum network general data\r",
+        "fullyImplemented": false,
+        "id": 1309,
+        "linearizedBaseContracts": [
+          1309
+        ],
+        "name": "INetworkMetadataProvider",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": "*********\r\n@dev returns the number of blocks in a year\r",
+            "id": 1293,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getBlocksPerYear",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1289,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "291:2:10"
+            },
+            "returnParameters": {
+              "id": 1292,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1291,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1293,
+                  "src": "317:7:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1290,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "317:7:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "316:9:10"
+            },
+            "scope": 1309,
+            "src": "266:60:10",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "*********\r\n@dev sets the number of blocks in a year\r",
+            "id": 1298,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setBlocksPerYear",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1296,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1295,
+                  "name": "_blocksPerYear",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1298,
+                  "src": "433:22:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1294,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "433:7:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "432:24:10"
+            },
+            "returnParameters": {
+              "id": 1297,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "465:0:10"
+            },
+            "scope": 1309,
+            "src": "407:59:10",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "*********\r\n@dev returns the address used as mock for the ethereum asset\r",
+            "id": 1303,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getEthereumAddress",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1299,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "594:2:10"
+            },
+            "returnParameters": {
+              "id": 1302,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1301,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1303,
+                  "src": "620:7:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1300,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "620:7:10",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "619:9:10"
+            },
+            "scope": 1309,
+            "src": "567:62:10",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "*********\r\n@dev sets the address used as mock for the ethereum asset\r",
+            "id": 1308,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setEthereumAddress",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1306,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1305,
+                  "name": "_ethereumAddress",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1308,
+                  "src": "755:24:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1304,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "755:7:10",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "754:26:10"
+            },
+            "returnParameters": {
+              "id": 1307,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "789:0:10"
+            },
+            "scope": 1309,
+            "src": "727:63:10",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 1310,
+        "src": "148:647:10"
+      }
+    ],
+    "src": "0:797:10"
+  },
+  "legacyAST": {
+    "absolutePath": "/F/Aave-Flash-Loan/src/contracts/interfaces/INetworkMetadataProvider.sol",
+    "exportedSymbols": {
+      "INetworkMetadataProvider": [
+        1309
+      ]
+    },
+    "id": 1310,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1288,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:10"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": "**********\r\n@title INetworkMetadataProvider interface\r\n@notice Interface for the ethereum network general data\r",
+        "fullyImplemented": false,
+        "id": 1309,
+        "linearizedBaseContracts": [
+          1309
+        ],
+        "name": "INetworkMetadataProvider",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": "*********\r\n@dev returns the number of blocks in a year\r",
+            "id": 1293,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getBlocksPerYear",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1289,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "291:2:10"
+            },
+            "returnParameters": {
+              "id": 1292,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1291,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1293,
+                  "src": "317:7:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1290,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "317:7:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "316:9:10"
+            },
+            "scope": 1309,
+            "src": "266:60:10",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "*********\r\n@dev sets the number of blocks in a year\r",
+            "id": 1298,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setBlocksPerYear",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1296,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1295,
+                  "name": "_blocksPerYear",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1298,
+                  "src": "433:22:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1294,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "433:7:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "432:24:10"
+            },
+            "returnParameters": {
+              "id": 1297,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "465:0:10"
+            },
+            "scope": 1309,
+            "src": "407:59:10",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "*********\r\n@dev returns the address used as mock for the ethereum asset\r",
+            "id": 1303,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getEthereumAddress",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1299,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "594:2:10"
+            },
+            "returnParameters": {
+              "id": 1302,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1301,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1303,
+                  "src": "620:7:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1300,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "620:7:10",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "619:9:10"
+            },
+            "scope": 1309,
+            "src": "567:62:10",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "*********\r\n@dev sets the address used as mock for the ethereum asset\r",
+            "id": 1308,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setEthereumAddress",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1306,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1305,
+                  "name": "_ethereumAddress",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1308,
+                  "src": "755:24:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1304,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "755:7:10",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "754:26:10"
+            },
+            "returnParameters": {
+              "id": 1307,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "789:0:10"
+            },
+            "scope": 1309,
+            "src": "727:63:10",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 1310,
+        "src": "148:647:10"
+      }
+    ],
+    "src": "0:797:10"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.8+commit.23d335f2.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.10",
+  "updatedAt": "2019-11-05T18:01:05.770Z",
+  "devdoc": {
+    "methods": {
+      "getBlocksPerYear()": {
+        "details": "returns the number of blocks in a year\r"
+      },
+      "getEthereumAddress()": {
+        "details": "returns the address used as mock for the ethereum asset\r"
+      },
+      "setBlocksPerYear(uint256)": {
+        "details": "sets the number of blocks in a year\r"
+      },
+      "setEthereumAddress(address)": {
+        "details": "sets the address used as mock for the ethereum asset\r"
+      }
+    },
+    "title": "INetworkMetadataProvider interface\r"
+  },
+  "userdoc": {
+    "methods": {
+      "getBlocksPerYear()": {
+        "notice": "*********\r"
+      },
+      "getEthereumAddress()": {
+        "notice": "*********\r"
+      },
+      "setBlocksPerYear(uint256)": {
+        "notice": "*********\r"
+      },
+      "setEthereumAddress(address)": {
+        "notice": "*********\r"
+      }
+    },
+    "notice": "**********\rInterface for the ethereum network general data\r"
+  }
+}
