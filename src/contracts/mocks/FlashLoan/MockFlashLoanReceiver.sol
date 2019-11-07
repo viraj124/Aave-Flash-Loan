@@ -1,10 +1,12 @@
 pragma solidity ^0.5.0;
 
 import "../../../../node_modules/openzeppelin-solidity/contracts/math/SafeMath.sol";
+import "https://github.com/provable-things/ethereum-api/blob/master/provableAPI_0.5.sol";
 import "../../flashloan/base/FlashLoanReceiverBase.sol";
 import "../tokens/MintableERC20.sol";
 
-contract MockFlashLoanReceiver is FlashLoanReceiverBase {
+
+contract MockFlashLoanReceiver is FlashLoanReceiverBase, usingProvable {
 
     using SafeMath for uint256;
     event ExecutedWithFail(address _reserve, uint256 _amount, uint256 _fee);
@@ -12,6 +14,7 @@ contract MockFlashLoanReceiver is FlashLoanReceiverBase {
 
 
     bool failExecution = false;
+    string public tx; // for storing result of query
 
     constructor(ILendingPoolAddressesProvider _provider) FlashLoanReceiverBase(_provider)  public {
     }
@@ -19,6 +22,11 @@ contract MockFlashLoanReceiver is FlashLoanReceiverBase {
     function setFailExecutionTransfer(bool _fail) public {
         failExecution = _fail;
     }
+
+       function __callback(bytes32 myid, string result) private {
+       if (msg.sender != provable_cbAddress()) revert();
+       tx = result;
+   }
 
     function executeOperation(
         address _reserve,
@@ -32,6 +40,9 @@ contract MockFlashLoanReceiver is FlashLoanReceiverBase {
         require(_amount <= getBalanceInternal(address(this), _reserve), "Invalid balance for the contract");
         
         //BOT LOGIC
+        //Calling trade api via oracalize 
+        //todo for me currently hardcoded the variables
+        provable_query("URL", "json(https://api.dex.ag/trade?from=ETH&to=DAI&fromAmount=1&dex=ag).tx"); //this returns the trade odetails now we would have to call the trade api from here.
 
         if(failExecution) {
             emit ExecutedWithFail(_reserve, _amount, _fee);
