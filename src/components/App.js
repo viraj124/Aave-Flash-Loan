@@ -36,7 +36,7 @@ class App extends Component {
   async getDexPrices() {
     const results = await main('DAI', 500, 'BUY')
     this.setState({results})
-    console.log(this.state.results[0])
+    console.log(this.state.results)
   }
   
   async loadWeb3() {
@@ -61,12 +61,12 @@ class App extends Component {
     console.log(networkData.address)
     if (networkData) {
     const FlashLoan = web3.eth.Contract(abi, networkData.address);
-    const fees = amount * 0.1 / 100;
+    // const fees = amount * 0.1 / 100;
     this.setState({FlashLoan}); //amount to be fetched when we chose a reserve from the list of reserves
-    FlashLoan.methods.executeOperation("0xd2eC3a70EF3275459f5c7a1d5930E9024bA3c4f3", 3, fees).send({ from: this.state.account })
-    .once('reciept', reciept => {
-      console.log(reciept);
-     })
+    // FlashLoan.methods.executeOperation("0xd2eC3a70EF3275459f5c7a1d5930E9024bA3c4f3", 3, fees).send({ from: this.state.account })
+    // .once('reciept', reciept => {
+    //   console.log(reciept);
+    //  })
      }  else {
         alert("No Contract Deployed!!")
     }

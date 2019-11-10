@@ -1,8 +1,11 @@
 pragma solidity ^0.5.0;
 
+
+//Guys, i am facing this issue already used identifier, i don;t know why i just imported it once, i have been googling this but haven't found any solution and as i said i have imported it only once so please see to this once all contracts are deployed except this
 import "../../../../node_modules/openzeppelin-solidity/contracts/math/SafeMath.sol";
 import "../../flashloan/base/FlashLoanReceiverBase.sol";
 import "../tokens/MintableERC20.sol";
+import "./KyberNetworkProxy.sol";
 import "./UniswapExchange.sol";
 
 
@@ -39,9 +42,10 @@ contract MockFlashLoanReceiver is FlashLoanReceiverBase {
         // Swap token -> Eth
         uint256 eth_bought = followerUniSwapExchange.tokenToEthSwapInput(_amount, 0, DEADLINE);
         // Exchange for Eth -> token
-        UniswapExchange leaderUniSwapExchange = UniswapExchange(0x274bBBBd9bf7Cab50fC8F62F5bb61d4FF297b362);
+        KyberNetworkProxy swapEth = KyberNetworkProxy(); //pass in the deployed address since this is a proxy contract so we need to deploy it manually.
+        
         // Swap Eth -> Token
-        uint256 token_bought = leaderUniSwapExchange.ethToTokenSwapInput.value(eth_bought)(_amount, DEADLINE);
+        uint token_bought = swapEth.swapEtherToToken.value(_reserve, _fee).send(eth_bought); //first parameter is the token we wnat to recieve which will always be DAI and 2nd is conversion rate, which i just substituting as _fee for now.
 
         emit trademade(token_bought, _amount);
         //returning amount + fee to the destination
