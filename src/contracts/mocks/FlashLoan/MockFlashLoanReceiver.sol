@@ -2,7 +2,7 @@ pragma solidity ^0.5.0;
 
 
 //Guys, i am facing this issue already used identifier, i don;t know why i just imported it once, i have been googling this but haven't found any solution and as i said i have imported it only once so please see to this once all contracts are deployed except this
-import "../../../../node_modules/openzeppelin-solidity/contracts/math/SafeMath.sol";
+//import "../../../../node_modules/openzeppelin-solidity/contracts/math/SafeMath.sol";
 import "../../flashloan/base/FlashLoanReceiverBase.sol";
 import "../tokens/MintableERC20.sol";
 import "./KyberNetworkProxy.sol";
