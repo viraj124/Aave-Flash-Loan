@@ -1,32 +1,23 @@
 pragma solidity ^0.5.0;
 
 import "../../../../node_modules/openzeppelin-solidity/contracts/math/SafeMath.sol";
-import "https://github.com/provable-things/ethereum-api/blob/master/provableAPI_0.5.sol";
 import "../../flashloan/base/FlashLoanReceiverBase.sol";
 import "../tokens/MintableERC20.sol";
+import "./UniswapExchange.sol";
 
 
-contract MockFlashLoanReceiver is FlashLoanReceiverBase, usingProvable {
+contract MockFlashLoanReceiver is FlashLoanReceiverBase {
 
     using SafeMath for uint256;
     event ExecutedWithFail(address _reserve, uint256 _amount, uint256 _fee);
     event ExecutedWithSuccess(address _reserve, uint256 _amount, uint256 _fee);
 
-
-    bool failExecution = false;
-    string public tx; // for storing result of query
+    event trademade(uint256 tokens, uint256 _amount);
 
     constructor(ILendingPoolAddressesProvider _provider) FlashLoanReceiverBase(_provider)  public {
     }
 
-    function setFailExecutionTransfer(bool _fail) public {
-        failExecution = _fail;
-    }
 
-       function __callback(bytes32 myid, string result) private {
-       if (msg.sender != provable_cbAddress()) revert();
-       tx = result;
-   }
 
     function executeOperation(
         address _reserve,
@@ -40,23 +31,19 @@ contract MockFlashLoanReceiver is FlashLoanReceiverBase, usingProvable {
         require(_amount <= getBalanceInternal(address(this), _reserve), "Invalid balance for the contract");
         
         //BOT LOGIC
-        //Calling trade api via oracalize 
-        //todo for me currently hardcoded the variables
-        provable_query("URL", "json(https://api.dex.ag/trade?from=ETH&to=DAI&fromAmount=1&dex=ag).tx"); //this returns the trade odetails now we would have to call the trade api from here.
+        token.approve(0xB4ca10f43caF503b7Aa0a77757B99c78212D6b92, _amount);
+                // Exchange for token -> eth
+        UniswapExchange followerUniSwapExchange = UniswapExchange(0xB4ca10f43caF503b7Aa0a77757B99c78212D6b92);
 
-        if(failExecution) {
-            emit ExecutedWithFail(_reserve, _amount, _fee);
-            //returns amount + fee, but does not transfer back funds
-            return _amount.add(_fee);
-        }
+        uint256 DEADLINE = block.timestamp + 200;
+        // Swap token -> Eth
+        uint256 eth_bought = followerUniSwapExchange.tokenToEthSwapInput(_amount, 0, DEADLINE);
+        // Exchange for Eth -> token
+        UniswapExchange leaderUniSwapExchange = UniswapExchange(0x274bBBBd9bf7Cab50fC8F62F5bb61d4FF297b362);
+        // Swap Eth -> Token
+        uint256 token_bought = leaderUniSwapExchange.ethToTokenSwapInput.value(eth_bought)(_amount, DEADLINE);
 
-        //execution does not fail - mint tokens and return them to the _destination
-        //note: if the reserve is eth, the mock contract must receive at least _fee ETH before calling executeOperation
-        INetworkMetadataProvider dataProvider = INetworkMetadataProvider(addressesProvider.getNetworkMetadataProvider());
-
-        if(_reserve != dataProvider.getEthereumAddress()) {
-            token.mint(_fee);
-        }
+        emit trademade(token_bought, _amount);
         //returning amount + fee to the destination
         transferFundsBackToPoolInternal(_reserve, _amount.add(_fee));
         emit ExecutedWithSuccess(_reserve, _amount, _fee);

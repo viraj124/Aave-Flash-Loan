@@ -2825,7 +2825,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.10",
-  "updatedAt": "2019-11-07T16:58:01.615Z",
+  "updatedAt": "2019-11-10T09:43:35.959Z",
   "devdoc": {
     "methods": {},
     "title": "ILendingPoolAddressesProvider interface\r"

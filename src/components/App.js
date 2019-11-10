@@ -32,7 +32,7 @@ class App extends Component {
     await this.getDexPrices();
    await this.loadBlockchainData();
   }
-
+//easwer -> currently hardcoded this justo the above mentioned ui change the values of the selected option by the user would be passed in the exceute operation function
   async getDexPrices() {
     const results = await main('DAI', 500, 'BUY')
     this.setState({results})
@@ -61,8 +61,9 @@ class App extends Component {
     console.log(networkData.address)
     if (networkData) {
     const FlashLoan = web3.eth.Contract(abi, networkData.address);
-    this.setState({FlashLoan});
-    FlashLoan.methods.executeOperation("0xd2eC3a70EF3275459f5c7a1d5930E9024bA3c4f3", 3, 2).send({ from: this.state.account })
+    const fees = amount * 0.1 / 100;
+    this.setState({FlashLoan}); //amount to be fetched when we chose a reserve from the list of reserves
+    FlashLoan.methods.executeOperation("0xd2eC3a70EF3275459f5c7a1d5930E9024bA3c4f3", 3, fees).send({ from: this.state.account })
     .once('reciept', reciept => {
       console.log(reciept);
      })
