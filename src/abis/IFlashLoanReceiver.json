@@ -5,14 +5,17 @@
       "constant": false,
       "inputs": [
         {
+          "internalType": "address",
           "name": "_reserve",
           "type": "address"
         },
         {
+          "internalType": "uint256",
           "name": "_amount",
           "type": "uint256"
         },
         {
+          "internalType": "uint256",
           "name": "_fee",
           "type": "uint256"
         }
@@ -20,6 +23,7 @@
       "name": "executeOperation",
       "outputs": [
         {
+          "internalType": "uint256",
           "name": "returnedAmount",
           "type": "uint256"
         }
@@ -29,43 +33,43 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.8+commit.23d335f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"name\":\"_reserve\",\"type\":\"address\"},{\"name\":\"_amount\",\"type\":\"uint256\"},{\"name\":\"_fee\",\"type\":\"uint256\"}],\"name\":\"executeOperation\",\"outputs\":[{\"name\":\"returnedAmount\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{},\"title\":\"IFeeProvider interface\\r\"},\"userdoc\":{\"methods\":{},\"notice\":\"**********\\rInterface for the Aave fee provider.\\r\"}},\"settings\":{\"compilationTarget\":{\"/F/Aave-Flash-Loan/src/contracts/flashloan/interfaces/IFlashLoanReceiver.sol\":\"IFlashLoanReceiver\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/F/Aave-Flash-Loan/src/contracts/flashloan/interfaces/IFlashLoanReceiver.sol\":{\"keccak256\":\"0x6aaa5adb92da7e2e895cee7ce50c33819394eccfb1ab45a06ff703100ccf75c7\",\"urls\":[\"bzzr://eb08e3491953ee2f0a477cf74583f5581fa6d8146a9a621bfbc415822207b3dd\"]}},\"version\":1}",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.12+commit.7709ece9\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"_reserve\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_amount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_fee\",\"type\":\"uint256\"}],\"name\":\"executeOperation\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"returnedAmount\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{},\"title\":\"IFeeProvider interface\"},\"userdoc\":{\"methods\":{},\"notice\":\"**********Interface for the Aave fee provider.\"}},\"settings\":{\"compilationTarget\":{\"/Users/eswarasai/Sites/Aave-Flash-Loan/src/contracts/flashloan/interfaces/IFlashLoanReceiver.sol\":\"IFlashLoanReceiver\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/eswarasai/Sites/Aave-Flash-Loan/src/contracts/flashloan/interfaces/IFlashLoanReceiver.sol\":{\"keccak256\":\"0x048e96d90bb16232ce2be02ca37de99f246b583345d21ba2dfa9949d10de015b\",\"urls\":[\"bzz-raw://7cf46eae7ffdfd51c4beb0b25c69e64bde4552cf4137a3a7c4f1f9c87e44fb6a\",\"dweb:/ipfs/QmX2i3UjUfpCz4tHxpDmpFJEX3wPorosboevadxJB58zJt\"]}},\"version\":1}",
   "bytecode": "0x",
   "deployedBytecode": "0x",
   "sourceMap": "",
   "deployedSourceMap": "",
-  "source": "pragma solidity ^0.5.0;\r\n\r\n/************\r\n@title IFeeProvider interface\r\n@notice Interface for the Aave fee provider.\r\n*/\r\n\r\ninterface IFlashLoanReceiver {\r\n\r\n    function executeOperation(address _reserve, uint256 _amount, uint256 _fee) external returns (uint256 returnedAmount);\r\n}\r\n",
-  "sourcePath": "F:\\Aave-Flash-Loan\\src\\contracts\\flashloan\\interfaces\\IFlashLoanReceiver.sol",
+  "source": "pragma solidity ^0.5.5;\n\n/************\n@title IFeeProvider interface\n@notice Interface for the Aave fee provider.\n*/\n\ninterface IFlashLoanReceiver {\n\n    function executeOperation(address _reserve, uint256 _amount, uint256 _fee) external returns (uint256 returnedAmount);\n}\n",
+  "sourcePath": "/Users/eswarasai/Sites/Aave-Flash-Loan/src/contracts/flashloan/interfaces/IFlashLoanReceiver.sol",
   "ast": {
-    "absolutePath": "/F/Aave-Flash-Loan/src/contracts/flashloan/interfaces/IFlashLoanReceiver.sol",
+    "absolutePath": "/Users/eswarasai/Sites/Aave-Flash-Loan/src/contracts/flashloan/interfaces/IFlashLoanReceiver.sol",
     "exportedSymbols": {
       "IFlashLoanReceiver": [
-        1173
+        190
       ]
     },
-    "id": 1174,
+    "id": 191,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1161,
+        "id": 178,
         "literals": [
           "solidity",
           "^",
           "0.5",
-          ".0"
+          ".5"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:23:8"
+        "src": "0:23:2"
       },
       {
         "baseContracts": [],
         "contractDependencies": [],
         "contractKind": "interface",
-        "documentation": "**********\r\n@title IFeeProvider interface\r\n@notice Interface for the Aave fee provider.\r",
+        "documentation": "**********\n@title IFeeProvider interface\n@notice Interface for the Aave fee provider.",
         "fullyImplemented": false,
-        "id": 1173,
+        "id": 190,
         "linearizedBaseContracts": [
-          1173
+          190
         ],
         "name": "IFlashLoanReceiver",
         "nodeType": "ContractDefinition",
@@ -73,23 +77,23 @@
           {
             "body": null,
             "documentation": null,
-            "id": 1172,
+            "id": 189,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "executeOperation",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1168,
+              "id": 185,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1163,
+                  "id": 180,
                   "name": "_reserve",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1172,
-                  "src": "189:16:8",
+                  "scope": 189,
+                  "src": "180:16:2",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -97,10 +101,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1162,
+                    "id": 179,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "189:7:8",
+                    "src": "180:7:2",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -112,11 +116,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 1165,
+                  "id": 182,
                   "name": "_amount",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1172,
-                  "src": "207:15:8",
+                  "scope": 189,
+                  "src": "198:15:2",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -124,10 +128,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1164,
+                    "id": 181,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "207:7:8",
+                    "src": "198:7:2",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -138,11 +142,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 1167,
+                  "id": 184,
                   "name": "_fee",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1172,
-                  "src": "224:12:8",
+                  "scope": 189,
+                  "src": "215:12:2",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -150,10 +154,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1166,
+                    "id": 183,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "224:7:8",
+                    "src": "215:7:2",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -163,19 +167,19 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "188:49:8"
+              "src": "179:49:2"
             },
             "returnParameters": {
-              "id": 1171,
+              "id": 188,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1170,
+                  "id": 187,
                   "name": "returnedAmount",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1172,
-                  "src": "256:22:8",
+                  "scope": 189,
+                  "src": "247:22:2",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -183,10 +187,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1169,
+                    "id": 186,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "256:7:8",
+                    "src": "247:7:2",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -196,51 +200,51 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "255:24:8"
+              "src": "246:24:2"
             },
-            "scope": 1173,
-            "src": "163:117:8",
+            "scope": 190,
+            "src": "154:117:2",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "external"
           }
         ],
-        "scope": 1174,
-        "src": "125:158:8"
+        "scope": 191,
+        "src": "118:155:2"
       }
     ],
-    "src": "0:285:8"
+    "src": "0:274:2"
   },
   "legacyAST": {
-    "absolutePath": "/F/Aave-Flash-Loan/src/contracts/flashloan/interfaces/IFlashLoanReceiver.sol",
+    "absolutePath": "/Users/eswarasai/Sites/Aave-Flash-Loan/src/contracts/flashloan/interfaces/IFlashLoanReceiver.sol",
     "exportedSymbols": {
       "IFlashLoanReceiver": [
-        1173
+        190
       ]
     },
-    "id": 1174,
+    "id": 191,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1161,
+        "id": 178,
         "literals": [
           "solidity",
           "^",
           "0.5",
-          ".0"
+          ".5"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:23:8"
+        "src": "0:23:2"
       },
       {
         "baseContracts": [],
         "contractDependencies": [],
         "contractKind": "interface",
-        "documentation": "**********\r\n@title IFeeProvider interface\r\n@notice Interface for the Aave fee provider.\r",
+        "documentation": "**********\n@title IFeeProvider interface\n@notice Interface for the Aave fee provider.",
         "fullyImplemented": false,
-        "id": 1173,
+        "id": 190,
         "linearizedBaseContracts": [
-          1173
+          190
         ],
         "name": "IFlashLoanReceiver",
         "nodeType": "ContractDefinition",
@@ -248,23 +252,23 @@
           {
             "body": null,
             "documentation": null,
-            "id": 1172,
+            "id": 189,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "executeOperation",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1168,
+              "id": 185,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1163,
+                  "id": 180,
                   "name": "_reserve",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1172,
-                  "src": "189:16:8",
+                  "scope": 189,
+                  "src": "180:16:2",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -272,10 +276,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1162,
+                    "id": 179,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "189:7:8",
+                    "src": "180:7:2",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -287,11 +291,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 1165,
+                  "id": 182,
                   "name": "_amount",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1172,
-                  "src": "207:15:8",
+                  "scope": 189,
+                  "src": "198:15:2",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -299,10 +303,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1164,
+                    "id": 181,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "207:7:8",
+                    "src": "198:7:2",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -313,11 +317,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 1167,
+                  "id": 184,
                   "name": "_fee",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1172,
-                  "src": "224:12:8",
+                  "scope": 189,
+                  "src": "215:12:2",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -325,10 +329,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1166,
+                    "id": 183,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "224:7:8",
+                    "src": "215:7:2",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -338,19 +342,19 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "188:49:8"
+              "src": "179:49:2"
             },
             "returnParameters": {
-              "id": 1171,
+              "id": 188,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1170,
+                  "id": 187,
                   "name": "returnedAmount",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1172,
-                  "src": "256:22:8",
+                  "scope": 189,
+                  "src": "247:22:2",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -358,10 +362,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1169,
+                    "id": 186,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "256:7:8",
+                    "src": "247:7:2",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -371,34 +375,34 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "255:24:8"
+              "src": "246:24:2"
             },
-            "scope": 1173,
-            "src": "163:117:8",
+            "scope": 190,
+            "src": "154:117:2",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "external"
           }
         ],
-        "scope": 1174,
-        "src": "125:158:8"
+        "scope": 191,
+        "src": "118:155:2"
       }
     ],
-    "src": "0:285:8"
+    "src": "0:274:2"
   },
   "compiler": {
     "name": "solc",
-    "version": "0.5.8+commit.23d335f2.Emscripten.clang"
+    "version": "0.5.12+commit.7709ece9.Emscripten.clang"
   },
   "networks": {},
-  "schemaVersion": "3.0.10",
-  "updatedAt": "2019-11-10T09:43:35.956Z",
+  "schemaVersion": "3.0.18",
+  "updatedAt": "2019-11-11T17:36:04.348Z",
   "devdoc": {
     "methods": {},
-    "title": "IFeeProvider interface\r"
+    "title": "IFeeProvider interface"
   },
   "userdoc": {
     "methods": {},
-    "notice": "**********\rInterface for the Aave fee provider.\r"
+    "notice": "**********Interface for the Aave fee provider."
   }
 }

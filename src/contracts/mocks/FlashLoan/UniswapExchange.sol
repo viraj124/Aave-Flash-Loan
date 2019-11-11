@@ -1,4 +1,4 @@
-pragma solidity ^0.5.0;
+pragma solidity ^0.5.5;
 
 contract UniswapExchange {
     // Address of ERC20 token sold on this exchange
