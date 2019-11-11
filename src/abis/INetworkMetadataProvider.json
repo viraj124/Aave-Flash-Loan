@@ -7,7 +7,6 @@
       "name": "getBlocksPerYear",
       "outputs": [
         {
-          "internalType": "uint256",
           "name": "",
           "type": "uint256"
         }
@@ -20,7 +19,6 @@
       "constant": false,
       "inputs": [
         {
-          "internalType": "uint256",
           "name": "_blocksPerYear",
           "type": "uint256"
         }
@@ -37,7 +35,6 @@
       "name": "getEthereumAddress",
       "outputs": [
         {
-          "internalType": "address",
           "name": "",
           "type": "address"
         }
@@ -50,7 +47,6 @@
       "constant": false,
       "inputs": [
         {
-          "internalType": "address",
           "name": "_ethereumAddress",
           "type": "address"
         }
@@ -62,15 +58,15 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.12+commit.7709ece9\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"getBlocksPerYear\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"getEthereumAddress\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_blocksPerYear\",\"type\":\"uint256\"}],\"name\":\"setBlocksPerYear\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"_ethereumAddress\",\"type\":\"address\"}],\"name\":\"setEthereumAddress\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{\"getBlocksPerYear()\":{\"details\":\"returns the number of blocks in a year\"},\"getEthereumAddress()\":{\"details\":\"returns the address used as mock for the ethereum asset\"},\"setBlocksPerYear(uint256)\":{\"details\":\"sets the number of blocks in a year\"},\"setEthereumAddress(address)\":{\"details\":\"sets the address used as mock for the ethereum asset\"}},\"title\":\"INetworkMetadataProvider interface\"},\"userdoc\":{\"methods\":{\"getBlocksPerYear()\":{\"notice\":\"*********\"},\"getEthereumAddress()\":{\"notice\":\"*********\"},\"setBlocksPerYear(uint256)\":{\"notice\":\"*********\"},\"setEthereumAddress(address)\":{\"notice\":\"*********\"}},\"notice\":\"**********Interface for the ethereum network general data\"}},\"settings\":{\"compilationTarget\":{\"/Users/eswarasai/Sites/Aave-Flash-Loan/src/contracts/interfaces/INetworkMetadataProvider.sol\":\"INetworkMetadataProvider\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/eswarasai/Sites/Aave-Flash-Loan/src/contracts/interfaces/INetworkMetadataProvider.sol\":{\"keccak256\":\"0x935bd0b3845b4e74ee434540b732be61537c9d8ba32b70f3d5ed6083bea7d232\",\"urls\":[\"bzz-raw://347c525d58d5baf3b0a237c4ec995641a25effa427530b7cf5c03fecd32ce40c\",\"dweb:/ipfs/QmSEabshKwkuSVvG351suCefXiPupTX4NTQ7h8zupwniDn\"]}},\"version\":1}",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.8+commit.23d335f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"getEthereumAddress\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_ethereumAddress\",\"type\":\"address\"}],\"name\":\"setEthereumAddress\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"getBlocksPerYear\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_blocksPerYear\",\"type\":\"uint256\"}],\"name\":\"setBlocksPerYear\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{\"getBlocksPerYear()\":{\"details\":\"returns the number of blocks in a year\\r\"},\"getEthereumAddress()\":{\"details\":\"returns the address used as mock for the ethereum asset\\r\"},\"setBlocksPerYear(uint256)\":{\"details\":\"sets the number of blocks in a year\\r\"},\"setEthereumAddress(address)\":{\"details\":\"sets the address used as mock for the ethereum asset\\r\"}},\"title\":\"INetworkMetadataProvider interface\\r\"},\"userdoc\":{\"methods\":{\"getBlocksPerYear()\":{\"notice\":\"*********\\r\"},\"getEthereumAddress()\":{\"notice\":\"*********\\r\"},\"setBlocksPerYear(uint256)\":{\"notice\":\"*********\\r\"},\"setEthereumAddress(address)\":{\"notice\":\"*********\\r\"}},\"notice\":\"**********\\rInterface for the ethereum network general data\\r\"}},\"settings\":{\"compilationTarget\":{\"/F/Aave-Flash-Loan/src/contracts/interfaces/INetworkMetadataProvider.sol\":\"INetworkMetadataProvider\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/F/Aave-Flash-Loan/src/contracts/interfaces/INetworkMetadataProvider.sol\":{\"keccak256\":\"0x41d9c09422190e08571abd7f72c76ea47a39024bde39c5cea5ae4910d0ce4ee2\",\"urls\":[\"bzzr://3fbdeb30b0dcaeefa4707c9aa476c778bcd781c7596cd8c7a7633838fc37711e\"]}},\"version\":1}",
   "bytecode": "0x",
   "deployedBytecode": "0x",
   "sourceMap": "",
   "deployedSourceMap": "",
-  "source": "pragma solidity ^0.5.5;\n\n/************\n@title INetworkMetadataProvider interface\n@notice Interface for the ethereum network general data\n*/\n\ninterface INetworkMetadataProvider {\n    /***********\n    @dev returns the number of blocks in a year\n     */\n    function getBlocksPerYear() external view returns (uint256);\n\n    /***********\n    @dev sets the number of blocks in a year\n     */\n    function setBlocksPerYear(uint256 _blocksPerYear) external;\n\n    /***********\n    @dev returns the address used as mock for the ethereum asset\n     */\n    function getEthereumAddress() external view returns (address);\n\n    /***********\n    @dev sets the address used as mock for the ethereum asset\n     */\n    function setEthereumAddress(address _ethereumAddress) external;\n\n}\n",
-  "sourcePath": "/Users/eswarasai/Sites/Aave-Flash-Loan/src/contracts/interfaces/INetworkMetadataProvider.sol",
+  "source": "pragma solidity ^0.5.5;\r\n\r\n/************\r\n@title INetworkMetadataProvider interface\r\n@notice Interface for the ethereum network general data\r\n*/\r\n\r\ninterface INetworkMetadataProvider {\r\n    /***********\r\n    @dev returns the number of blocks in a year\r\n     */\r\n    function getBlocksPerYear() external view returns (uint256);\r\n\r\n    /***********\r\n    @dev sets the number of blocks in a year\r\n     */\r\n    function setBlocksPerYear(uint256 _blocksPerYear) external;\r\n\r\n    /***********\r\n    @dev returns the address used as mock for the ethereum asset\r\n     */\r\n    function getEthereumAddress() external view returns (address);\r\n\r\n    /***********\r\n    @dev sets the address used as mock for the ethereum asset\r\n     */\r\n    function setEthereumAddress(address _ethereumAddress) external;\r\n\r\n}\r\n",
+  "sourcePath": "F:\\Aave-Flash-Loan\\src\\contracts\\interfaces\\INetworkMetadataProvider.sol",
   "ast": {
-    "absolutePath": "/Users/eswarasai/Sites/Aave-Flash-Loan/src/contracts/interfaces/INetworkMetadataProvider.sol",
+    "absolutePath": "/F/Aave-Flash-Loan/src/contracts/interfaces/INetworkMetadataProvider.sol",
     "exportedSymbols": {
       "INetworkMetadataProvider": [
         326
@@ -94,7 +90,7 @@
         "baseContracts": [],
         "contractDependencies": [],
         "contractKind": "interface",
-        "documentation": "**********\n@title INetworkMetadataProvider interface\n@notice Interface for the ethereum network general data",
+        "documentation": "**********\r\n@title INetworkMetadataProvider interface\r\n@notice Interface for the ethereum network general data\r",
         "fullyImplemented": false,
         "id": 326,
         "linearizedBaseContracts": [
@@ -105,7 +101,7 @@
         "nodes": [
           {
             "body": null,
-            "documentation": "*********\n@dev returns the number of blocks in a year",
+            "documentation": "*********\r\n@dev returns the number of blocks in a year\r",
             "id": 310,
             "implemented": false,
             "kind": "function",
@@ -116,7 +112,7 @@
               "id": 306,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "280:2:4"
+              "src": "291:2:4"
             },
             "returnParameters": {
               "id": 309,
@@ -128,7 +124,7 @@
                   "name": "",
                   "nodeType": "VariableDeclaration",
                   "scope": 310,
-                  "src": "306:7:4",
+                  "src": "317:7:4",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -139,7 +135,7 @@
                     "id": 307,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "306:7:4",
+                    "src": "317:7:4",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -149,17 +145,17 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "305:9:4"
+              "src": "316:9:4"
             },
             "scope": 326,
-            "src": "255:60:4",
+            "src": "266:60:4",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "external"
           },
           {
             "body": null,
-            "documentation": "*********\n@dev sets the number of blocks in a year",
+            "documentation": "*********\r\n@dev sets the number of blocks in a year\r",
             "id": 315,
             "implemented": false,
             "kind": "function",
@@ -176,7 +172,7 @@
                   "name": "_blocksPerYear",
                   "nodeType": "VariableDeclaration",
                   "scope": 315,
-                  "src": "417:22:4",
+                  "src": "433:22:4",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -187,7 +183,7 @@
                     "id": 311,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "417:7:4",
+                    "src": "433:7:4",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -197,23 +193,23 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "416:24:4"
+              "src": "432:24:4"
             },
             "returnParameters": {
               "id": 314,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "449:0:4"
+              "src": "465:0:4"
             },
             "scope": 326,
-            "src": "391:59:4",
+            "src": "407:59:4",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "external"
           },
           {
             "body": null,
-            "documentation": "*********\n@dev returns the address used as mock for the ethereum asset",
+            "documentation": "*********\r\n@dev returns the address used as mock for the ethereum asset\r",
             "id": 320,
             "implemented": false,
             "kind": "function",
@@ -224,7 +220,7 @@
               "id": 316,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "573:2:4"
+              "src": "594:2:4"
             },
             "returnParameters": {
               "id": 319,
@@ -236,7 +232,7 @@
                   "name": "",
                   "nodeType": "VariableDeclaration",
                   "scope": 320,
-                  "src": "599:7:4",
+                  "src": "620:7:4",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -247,7 +243,7 @@
                     "id": 317,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "599:7:4",
+                    "src": "620:7:4",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -258,17 +254,17 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "598:9:4"
+              "src": "619:9:4"
             },
             "scope": 326,
-            "src": "546:62:4",
+            "src": "567:62:4",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "external"
           },
           {
             "body": null,
-            "documentation": "*********\n@dev sets the address used as mock for the ethereum asset",
+            "documentation": "*********\r\n@dev sets the address used as mock for the ethereum asset\r",
             "id": 325,
             "implemented": false,
             "kind": "function",
@@ -285,7 +281,7 @@
                   "name": "_ethereumAddress",
                   "nodeType": "VariableDeclaration",
                   "scope": 325,
-                  "src": "729:24:4",
+                  "src": "755:24:4",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -296,7 +292,7 @@
                     "id": 321,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "729:7:4",
+                    "src": "755:7:4",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -307,29 +303,29 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "728:26:4"
+              "src": "754:26:4"
             },
             "returnParameters": {
               "id": 324,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "763:0:4"
+              "src": "789:0:4"
             },
             "scope": 326,
-            "src": "701:63:4",
+            "src": "727:63:4",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "external"
           }
         ],
         "scope": 327,
-        "src": "141:626:4"
+        "src": "148:647:4"
       }
     ],
-    "src": "0:768:4"
+    "src": "0:797:4"
   },
   "legacyAST": {
-    "absolutePath": "/Users/eswarasai/Sites/Aave-Flash-Loan/src/contracts/interfaces/INetworkMetadataProvider.sol",
+    "absolutePath": "/F/Aave-Flash-Loan/src/contracts/interfaces/INetworkMetadataProvider.sol",
     "exportedSymbols": {
       "INetworkMetadataProvider": [
         326
@@ -353,7 +349,7 @@
         "baseContracts": [],
         "contractDependencies": [],
         "contractKind": "interface",
-        "documentation": "**********\n@title INetworkMetadataProvider interface\n@notice Interface for the ethereum network general data",
+        "documentation": "**********\r\n@title INetworkMetadataProvider interface\r\n@notice Interface for the ethereum network general data\r",
         "fullyImplemented": false,
         "id": 326,
         "linearizedBaseContracts": [
@@ -364,7 +360,7 @@
         "nodes": [
           {
             "body": null,
-            "documentation": "*********\n@dev returns the number of blocks in a year",
+            "documentation": "*********\r\n@dev returns the number of blocks in a year\r",
             "id": 310,
             "implemented": false,
             "kind": "function",
@@ -375,7 +371,7 @@
               "id": 306,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "280:2:4"
+              "src": "291:2:4"
             },
             "returnParameters": {
               "id": 309,
@@ -387,7 +383,7 @@
                   "name": "",
                   "nodeType": "VariableDeclaration",
                   "scope": 310,
-                  "src": "306:7:4",
+                  "src": "317:7:4",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -398,7 +394,7 @@
                     "id": 307,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "306:7:4",
+                    "src": "317:7:4",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -408,17 +404,17 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "305:9:4"
+              "src": "316:9:4"
             },
             "scope": 326,
-            "src": "255:60:4",
+            "src": "266:60:4",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "external"
           },
           {
             "body": null,
-            "documentation": "*********\n@dev sets the number of blocks in a year",
+            "documentation": "*********\r\n@dev sets the number of blocks in a year\r",
             "id": 315,
             "implemented": false,
             "kind": "function",
@@ -435,7 +431,7 @@
                   "name": "_blocksPerYear",
                   "nodeType": "VariableDeclaration",
                   "scope": 315,
-                  "src": "417:22:4",
+                  "src": "433:22:4",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -446,7 +442,7 @@
                     "id": 311,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "417:7:4",
+                    "src": "433:7:4",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -456,23 +452,23 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "416:24:4"
+              "src": "432:24:4"
             },
             "returnParameters": {
               "id": 314,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "449:0:4"
+              "src": "465:0:4"
             },
             "scope": 326,
-            "src": "391:59:4",
+            "src": "407:59:4",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "external"
           },
           {
             "body": null,
-            "documentation": "*********\n@dev returns the address used as mock for the ethereum asset",
+            "documentation": "*********\r\n@dev returns the address used as mock for the ethereum asset\r",
             "id": 320,
             "implemented": false,
             "kind": "function",
@@ -483,7 +479,7 @@
               "id": 316,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "573:2:4"
+              "src": "594:2:4"
             },
             "returnParameters": {
               "id": 319,
@@ -495,7 +491,7 @@
                   "name": "",
                   "nodeType": "VariableDeclaration",
                   "scope": 320,
-                  "src": "599:7:4",
+                  "src": "620:7:4",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -506,7 +502,7 @@
                     "id": 317,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "599:7:4",
+                    "src": "620:7:4",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -517,17 +513,17 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "598:9:4"
+              "src": "619:9:4"
             },
             "scope": 326,
-            "src": "546:62:4",
+            "src": "567:62:4",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "external"
           },
           {
             "body": null,
-            "documentation": "*********\n@dev sets the address used as mock for the ethereum asset",
+            "documentation": "*********\r\n@dev sets the address used as mock for the ethereum asset\r",
             "id": 325,
             "implemented": false,
             "kind": "function",
@@ -544,7 +540,7 @@
                   "name": "_ethereumAddress",
                   "nodeType": "VariableDeclaration",
                   "scope": 325,
-                  "src": "729:24:4",
+                  "src": "755:24:4",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -555,7 +551,7 @@
                     "id": 321,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "729:7:4",
+                    "src": "755:7:4",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -566,66 +562,66 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "728:26:4"
+              "src": "754:26:4"
             },
             "returnParameters": {
               "id": 324,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "763:0:4"
+              "src": "789:0:4"
             },
             "scope": 326,
-            "src": "701:63:4",
+            "src": "727:63:4",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "external"
           }
         ],
         "scope": 327,
-        "src": "141:626:4"
+        "src": "148:647:4"
       }
     ],
-    "src": "0:768:4"
+    "src": "0:797:4"
   },
   "compiler": {
     "name": "solc",
-    "version": "0.5.12+commit.7709ece9.Emscripten.clang"
+    "version": "0.5.8+commit.23d335f2.Emscripten.clang"
   },
   "networks": {},
-  "schemaVersion": "3.0.18",
-  "updatedAt": "2019-11-11T18:01:43.099Z",
+  "schemaVersion": "3.0.10",
+  "updatedAt": "2019-11-11T18:09:36.187Z",
   "devdoc": {
     "methods": {
       "getBlocksPerYear()": {
-        "details": "returns the number of blocks in a year"
+        "details": "returns the number of blocks in a year\r"
       },
       "getEthereumAddress()": {
-        "details": "returns the address used as mock for the ethereum asset"
+        "details": "returns the address used as mock for the ethereum asset\r"
       },
       "setBlocksPerYear(uint256)": {
-        "details": "sets the number of blocks in a year"
+        "details": "sets the number of blocks in a year\r"
       },
       "setEthereumAddress(address)": {
-        "details": "sets the address used as mock for the ethereum asset"
+        "details": "sets the address used as mock for the ethereum asset\r"
       }
     },
-    "title": "INetworkMetadataProvider interface"
+    "title": "INetworkMetadataProvider interface\r"
   },
   "userdoc": {
     "methods": {
       "getBlocksPerYear()": {
-        "notice": "*********"
+        "notice": "*********\r"
       },
       "getEthereumAddress()": {
-        "notice": "*********"
+        "notice": "*********\r"
       },
       "setBlocksPerYear(uint256)": {
-        "notice": "*********"
+        "notice": "*********\r"
       },
       "setEthereumAddress(address)": {
-        "notice": "*********"
+        "notice": "*********\r"
       }
     },
-    "notice": "**********Interface for the ethereum network general data"
+    "notice": "**********\rInterface for the ethereum network general data\r"
   }
 }
