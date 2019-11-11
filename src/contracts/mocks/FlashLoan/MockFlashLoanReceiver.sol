@@ -42,7 +42,7 @@ contract MockFlashLoanReceiver is FlashLoanReceiverBase {
         //BOT LOGIC
         token.approve(0xB4ca10f43caF503b7Aa0a77757B99c78212D6b92, _amount);
         // Exchange for token -> eth
-        UniswapExchange followerUniSwapExchange = UniswapExchange(0xD3E51Ef092B2845f10401a0159B2B96e8B6c3D30);
+        UniswapExchange followerUniSwapExchange = UniswapExchange(0xc4f86802c76df98079f45a60ba906bdf86ad90c1);
 
         uint256 DEADLINE = block.timestamp + 200;
         // Swap token -> Eth
